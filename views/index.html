@@ -11,29 +11,22 @@
   </head>
   <body>
     <header>
-      <h1>Metric/Imperial Converter</h1>
+      <h1 id="title">Metric/Imperial Converter</h1>
     </header>
-    <hr style='margin: 50px'>
-    <section>
-      <h3>Example usage</h3>
-      <code>/api/convert?input=4gal</code><br>
-      <code>/api/convert?input=1/2km</code><br>
-      <code>/api/convert?input=5.4/3lbs</code><br>
-      <code>/api/convert?input=kg</code><br>
-      <h3>Example return</h3>
-      <code>{ initNum: 3.1, initUnit: 'mi', returnNum: 4.98895, returnUnit: 'km', string: '3.1 miles converts to 4.98895 kilometers' }</code>
-    </section>
-    <hr style='margin: 50px'>
-    <section>
-      <div id='testui' >
-        <h3 style="text-align: left">Front-End</h3>
+    <div id="converter">
+      <div id='testui'>
         <form id="convertForm" class="border">
-          <input type="text" id="convertField" name="input" placeholder="3.1mi" style="width: 200px">
-          <input id="convert" type="submit" value='Convert!'>
+          <div id="blop">
+            <input type="text" id="convertField" name="input" placeholder="3.1mi" style="width: 200px" class="form-control">
+          </div>
+          <div id="click">
+            <input id="convert" type="submit" value='Convert!' class="btn btn-primary btn-lg">
+          </div>
         </form>
         <p id='result'></p>
         <code id='jsonResult'></code>
       </div>
+    </div>
     </section>
     <!-- Your web-app is https, so your scripts need to be too -->
     <script src="https://code.jquery.com/jquery-2.2.1.min.js"
